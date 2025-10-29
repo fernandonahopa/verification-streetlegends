@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap');
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONFIGURAÇÃO DO BODY */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* remove barras de rolagem */
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* distribui conteúdo de cima a baixo */
+  text-align: center;
+  padding: 25px 15px;
+}
+
+/* LOGO SVG */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+header img {
+  width: 100px; /* menor */
+  filter: brightness(0) invert(1); /* torna branco */
+  opacity: 0.9;
+}
+
+/* CONTEÚDO CENTRAL */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TÍTULO */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(18px, 4vw, 24px);
+  letter-spacing: 1px;
+  color: #f7f7f7;
+  margin-bottom: 16px;
+  letter-spacing:-1px;
+}
+
+/* INPUT */
+input {
+  width: 85%;
+  max-width: 300px;
+  padding: 12px;
+  border: 2px solid #777777;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  text-transform: uppercase;
+  text-align: center; /* centraliza o texto dentro do input */
+}
+
+/* BOTÃO */
+button {
+  margin-top: 14px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background: #ff3232;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #e60027;
+  transform: scale(1.03);
+}
+
+/* RESULTADO */
+.result {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  min-height: 26px;
+  text-align: center;
+}
+
+.valid {
+  color: #00ff7f;
+}
+
+.invalid {
+  color: #ff4444;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 8px;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px; /* ← aumenta o espaço acima dos ícones */
+}
+
+
+footer p {
+  font-size: 12px;
+  color: #666;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* aumenta o espaçamento entre ícones */
+  margin-bottom: 6px;
+}
+
+.social-links a {
+  color: #e7e7e7;
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* RESPONSIVIDADE */
+@media (max-height: 600px) {
+  header img {
+    width: 80px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  input {
+    font-size: 13px;
+  }
+  button {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+}
